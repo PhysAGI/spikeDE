@@ -1,0 +1,142 @@
+site_name: spikeDE Documentation
+site_url:
+repo_url: https://github.com/PhysAGI/spikeDE
+repo_name: PhysAGI/spikeDE
+copyright: Copyright &copy; 2026 PhysAGI
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.tabs
+    - navigation.prune
+    - navigation.path
+    - navigation.indexes
+    - navigation.sections
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+nav:
+  - Home: 
+    - index.md
+    - About: about.md
+  - Getting started:
+    - get_start/index.md
+    - Installation: get_start/installation.md
+    - Introduction by Example: get_start/introduction.md
+  - Tutorials:
+    - tutorials/index.md
+    - Basics:
+      - Neuron: tutorials/basics/neuron.md
+      - Solver: tutorials/basics/solver.md
+      - Surrogate Gradient: tutorials/basics/surrogate.md
+    - Intermediate:
+      - ODE Function: tutorials/intermediate/odefunc_fx.md
+      - SNN Wrapper: tutorials/intermediate/snnWrapper.md
+      - Per-Layer Alpha Configuration: tutorials/intermediate/per_layer_alpha.md
+    - Advanced:
+      - Neuromorphic Task: tutorials/advanced/neuromorphic.md
+      - Graph Learning Task: tutorials/advanced/graph.md
+  - API Reference:
+    - api/index.md
+    - spikeDE.neuron: api/neuron.md
+    - spikeDE.odefunc: api/odefunc.md
+    - spikeDE.snn: api/snn.md
+    - spikeDE.solver: api/solver.md
+    - spikeDE.surrogate: api/surrogate.md
+    - spikeDE.layer: api/layer.md
+  - Blog:
+    - blog/index.md
+
+plugins:
+  - search
+  - blog
+  - mkdocstrings:
+      handlers:
+        python:
+          inventories:
+          - https://docs.python.org/3/objects.inv
+          - https://docs.pytorch.org/docs/stable/objects.inv
+          options:
+            allow_inspection: true
+            backlinks: flat
+            show_bases: true
+            show_source: true
+            skip_local_inventory: false
+            heading_level: 2
+            parameter_headings: false
+            show_root_heading: false
+            show_root_toc_entry: false
+            show_root_full_path: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: false
+            docstring_style: google
+            docstring_section_style: list
+            show_docstring_examples: true
+            annotations_path: brief
+            modernize_annotations: true
+            show_signature: true
+            separate_signature: true
+            show_signature_annotations: true
+            signature_crossrefs: true
+            unwrap_annotated: true
+            line_length: 80
+            merge_init_into_class: true
+            docstring_options:
+              ignore_init_summary: true
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.blocks.caption
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+
+extra_javascript:
+  - /assets/javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - /assets/stylesheets/mkdocstrings.css
