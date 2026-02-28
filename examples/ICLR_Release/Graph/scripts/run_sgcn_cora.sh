@@ -7,7 +7,8 @@ ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$ROOT_DIR"
 python run.py --backbone SGCN \
     --dataset Cora \
+    --integrator fdeint \
     --tau 2.0 \
     --alpha 0.9 \
     --method gl \
-    --taulearnable
+    --tau_learnable
