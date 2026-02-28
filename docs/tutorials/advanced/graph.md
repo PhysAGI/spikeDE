@@ -1,14 +1,14 @@
 # Graph Learning Tasks
 
-This guide provides an overview of the graph learning experiments conducted with **spikeDE**. These experiments demonstrate the effectiveness of our fractional-order Spiking Neural Networks (f-SNNs) in capturing long-range dependencies on graph-structured data, outperforming traditional integer-order SNNs.
+This guide provides an overview of the graph learning experiments conducted with **spikeDE**. These experiments demonstrate the effectiveness of our fractional-order Spiking Neural Networks (*f*-SNNs) in capturing long-range dependencies on graph-structured data, outperforming traditional integer-order SNNs.
 
-All source code for these experiments is open-source and reproducible. You can access the specific implementation scripts and configurations in our :material-github: [GitHub repository](#).
+All source code for these experiments is open-source and reproducible. You can access the specific implementation scripts and configurations in our :material-github: [GitHub repository](https://github.com/PhysAGI/spikeDE/tree/main/examples/ICLR_Release/Graph).
 
 ## Overview
 
 Traditional Spiking Neural Networks (SNNs) typically model neuron dynamics using first-order Ordinary Differential Equations (ODEs), which assume a Markovian property where the current state depends only on the immediate past. This limits their ability to capture complex temporal correlations often present in graph data sequences.
 
-Our **f-SNN** framework integrates **fractional-order differential equations (f-ODEs)** into Spiking Graph Neural Networks (SGNNs). By replacing standard integer-order neurons with fractional-order neurons, our models introduce a power-law memory kernel. This allows the network to retain information from distant past time steps, leading to:
+Our ***f*-SNN** framework integrates **Fractional Differential Equations (FDEs)** into Spiking Graph Neural Networks (SGNNs). By replacing standard integer-order neurons with fractional-order neurons, our models introduce a power-law memory kernel. This allows the network to retain information from distant past time steps, leading to:
 
 - **Higher Node Classification Accuracy:** Consistently outperforming baselines like SpikingJelly and snnTorch across multiple datasets.
 - **Enhanced Robustness:** Superior stability against feature masking and structural perturbations (edge dropping).
@@ -30,12 +30,12 @@ We evaluated our framework on six mainstream graph learning benchmarks, covering
 ## Experimental Setup
 
 ### Architecture & Baselines
-To ensure fair comparison, we integrated our `f-LIF` neurons into two established Spiking Graph Neural Network architectures:
+To ensure fair comparison, we integrated our *f*-LIF neurons into two established Spiking Graph Neural Network architectures:
 
 - **SGCN** (Spiking Graph Convolutional Network)
 - **DRSGNN** (Dynamic Reactive Spiking Graph Neural Network)
 
-**Baselines:** We compared our results against the original implementations of these models using standard `LIF` neurons from popular frameworks including [SpikingJelly](https://github.com/fangwei123456/spikingjelly) and [snnTorch](https://github.com/jeshraghian/snntorch).
+**Baselines:** We compared our results against the original implementations of these models using standard LIF neurons from popular frameworks including [SpikingJelly](https://github.com/fangwei123456/spikingjelly) and [snnTorch](https://github.com/jeshraghian/snntorch).
 
 ### Key Hyperparameters
 
@@ -48,19 +48,19 @@ To ensure fair comparison, we integrated our `f-LIF` neurons into two establishe
 
 ## Key Results
 
-Our fractional adaptations of SGCN and DRSGNN achieved superior accuracy across all datasets. For example, on the **Cora** dataset, **SGCN (f-SNN)** achieved **88.08%** accuracy, significantly outperforming the SpikingJelly baseline (81.81%).
+Our fractional adaptations of SGCN and DRSGNN achieved superior accuracy across all datasets. For example, on the **Cora** dataset, **SGCN (*f*-SNN)** achieved **88.08%** accuracy, significantly outperforming the SpikingJelly baseline (81.81%).
 
 | Method | Cora | Citeseer | Pubmed | Photo | Computers | ogbn-arxiv |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **SGCN (SpikingJelly)** | 81.81 | 71.83 | 86.79 | 87.72 | 70.86 | 50.26 |
 | **SGCN (snnTorch)** | 83.12 | 71.68 | 59.82 | 83.34 | 74.88 | 21.55 |
-| **SGCN (f-SNN)** | **88.08** | **73.80** | **87.17** | **92.49** | **89.12** | **51.10** |
+| **SGCN (*f*-SNN)** | **88.08** | **73.80** | **87.17** | **92.49** | **89.12** | **51.10** |
 | **DRSGNN (SpikingJelly)** | 83.30 | 72.72 | 87.13 | 88.31 | 76.55 | 50.13 |
 | **DRSGNN (snnTorch)** | 80.98 | 68.00 | 59.56 | 82.28 | 76.78 | 28.46 |
-| **DRSGNN (f-SNN)** | **88.51** | **75.11** | **87.29** | **91.93** | **88.77** | **53.13** |
+| **DRSGNN (*f*-SNN)** | **88.51** | **75.11** | **87.29** | **91.93** | **88.77** | **53.13** |
 
 !!! note "Robustness Experiments"
-    The f-SNN framework demonstrated exceptional robustness under feature masking and edge dropping scenarios, maintaining high accuracy even when significant portions of graph information were corrupted. Detailed robustness analysis can be found in our [ICLR 2026 Paper](https://arxiv.org/abs/2507.16937).
+    The *f*-SNN framework demonstrated exceptional robustness under feature masking and edge dropping scenarios, maintaining high accuracy even when significant portions of graph information were corrupted. Detailed robustness analysis can be found in our [ICLR 2026 Paper](https://arxiv.org/abs/2507.16937).
 
 ## Reproducing the Results
 

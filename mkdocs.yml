@@ -1,5 +1,5 @@
 site_name: spikeDE Documentation
-site_url:
+site_url: https://physagi.github.io/spikeDE/
 repo_url: https://github.com/PhysAGI/spikeDE
 repo_name: PhysAGI/spikeDE
 copyright: Copyright &copy; 2026 PhysAGI
@@ -135,8 +135,8 @@ markdown_extensions:
   - pymdownx.details
 
 extra_javascript:
-  - /assets/javascripts/mathjax.js
+  - assets/javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
-  - /assets/stylesheets/mkdocstrings.css
+  - assets/stylesheets/mkdocstrings.css

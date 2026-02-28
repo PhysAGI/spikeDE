@@ -1,6 +1,6 @@
 # Getting Started
 
-**spikeDE** empowers you to build **Fractional-Order Spiking Neural Networks (f-SNNs)** using an API that aligns closely with :simple-pytorch: PyTorch. This design ensures a seamless transition for :simple-pytorch: PyTorch users, allowing you to leverage existing skills while exploring advanced fractional dynamics with minimal learning curve.
+**spikeDE** empowers you to build **Fractional-Order Spiking Neural Networks (*f*-SNNs)** using an API that aligns closely with :simple-pytorch: PyTorch. This design ensures a seamless transition for :simple-pytorch: PyTorch users, allowing you to leverage existing skills while exploring advanced fractional dynamics with minimal learning curve.
 
 We support a diverse range of modern neural architectures, including **Multilayer Perceptrons (MLPs)**, **Convolutional Neural Networks (CNNs)**, **Residual Networks (ResNets)** and **Transformers**.
 
@@ -22,11 +22,11 @@ In this section, you will find step-by-step guides ranging from installation to 
     ---
     Dive straight into code. Follow a complete walkthrough to define a fractional spiking model, encode inputs, train on a dataset, and evaluate performance.
 
-    [:material-arrow-right: Try Your First f-SNN](./introduction.md)
+    [:material-arrow-right: Try Your First *f*-SNN](./introduction.md)
 
 </div>
 
 !!! tip "New to Spiking Neural Networks?" 
-    If you are unfamiliar with SNN concepts, start with the **[Introduction by Example](./introduction.md)**. It assumes only basic familiarity with PyTorch and gently introduces core concepts such as spike encoding, fractional leaky integrate-and-fire (f-LIF) neurons, and surrogate gradients.
+    If you are unfamiliar with SNN concepts, start with the **[Introduction by Example](./introduction.md)**. It assumes only basic familiarity with PyTorch and gently introduces core concepts such as spike encoding, fractional leaky integrate-and-fire (*f*-LIF) neurons, and surrogate gradients.
 
 Happy spiking!
