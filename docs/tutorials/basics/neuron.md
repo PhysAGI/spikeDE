@@ -208,7 +208,7 @@ This means your custom neuron works seamlessly with both integer-order (`odeint`
 In this tutorial, we explored how **spikeDE** extends traditional spiking neurons with fractional-order dynamics:
 
 - **From Integer to Fractional**: We discussed how replacing $\frac{d}{dt}$ with $D^\alpha$ introduces memory and non-locality, enabling the modeling of complex temporal dependencies.
-- **Available Neurons**: **spikeDE** supports **f-IF** and **f-LIF** neurons, which generalize their integer-order counterparts via fractional differential equations.
+- **Available Neurons**: **spikeDE** supports ***f*-IF** and ***f*-LIF** neurons, which generalize their integer-order counterparts via fractional differential equations.
 - **Configuration**: Neurons are configured with standard hyperparameters (`tau`, `threshold`), while fractional behavior is controlled via `SNNWrapper` arguments like `alpha` and `integrator`.
 - **Customization**: By separating dynamics (neuron) from integration (solver), **spikeDE** allows users to define custom neurons easily. The `SNNWrapper` handles the complexity of fractional history management, ensuring your custom models benefit from fractional dynamics automatically.
 

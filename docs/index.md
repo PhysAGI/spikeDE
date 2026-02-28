@@ -1,6 +1,6 @@
 # Welcome to spikeDE's documentation
 
-**spikeDE** is a powerful, :simple-pytorch: [PyTorch](https://pytorch.org)-native library designed to build, train, and deploy **Fractional-Order Spiking Neural Networks (f-SNNs)**.
+**spikeDE** is a powerful, :simple-pytorch: [PyTorch](https://pytorch.org)-native library designed to build, train, and deploy **Fractional-Order Spiking Neural Networks (*f*-SNNs)**.
 
 While traditional Spiking Neural Networks (SNNs) rely on integer-order differential equations (e.g., standard Leaky Integrate-and-Fire models) that assume Markovian dynamics—where the current state depends solely on the immediate past—**spikeDE** introduces a generalized **fractional calculus framework**. By utilizing Caputo fractional derivatives ($D^\alpha$), our library enables neural units with inherent **long-term memory** and **non-Markovian properties**, closely mimicking the complex temporal dynamics and fractal structures observed in biological neurons.
 

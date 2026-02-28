@@ -1,6 +1,6 @@
 # Per-Layer Alpha: Customizing Memory Dynamics in Fractional SNNs
 
-In the realm of Fractional Spiking Neural Networks (f-SNNs), the fractional order $\alpha$ is not just a hyperparameter; it is the **control knob for memory**. It dictates how much historical information a neuron retains when computing its current state.
+In the realm of Fractional Spiking Neural Networks (*f*-SNNs), the fractional order $\alpha$ is not just a hyperparameter; it is the **control knob for memory**. It dictates how much historical information a neuron retains when computing its current state.
 
 While setting a global $\alpha$ for the entire network is a good starting point, biological neural systems and complex temporal tasks often require heterogeneous dynamics. Some layers might need to act as short-term buffers (high $\alpha$, close to 1.0), while others function as long-term integrators (low $\alpha$, closer to 0.0).
 
@@ -10,7 +10,7 @@ The **Per-Layer Alpha** configuration in **spikeDE** empowers you to define thes
 
 Before diving into code, it's crucial to understand what changing $\alpha$ actually does to your network's behavior.
 
-The membrane potential $V(t)$ in an f-SNN evolves according to the Caputo fractional derivative:
+The membrane potential $V(t)$ in an *f*-SNN evolves according to the Caputo fractional derivative:
 
 $$ D^{\alpha} V(t) = f(t, V(t)) $$
 
@@ -24,7 +24,7 @@ By configuring `alpha` per layer, you allow your network to automatically specia
 **spikeDE** supports four distinct modes for configuring fractional orders, ranging from simple global settings to highly complex, layer-specific distributed orders.
 
 ### Global Scalar
-Every neuron layer in your network shares the exact same fractional order $\alpha$. This is equivalent to standard f-SNN behavior.
+Every neuron layer in your network shares the exact same fractional order $\alpha$. This is equivalent to standard *f*-SNN behavior.
 
 ```python
 # All layers use α = 0.6

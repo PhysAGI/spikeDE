@@ -1,14 +1,14 @@
 # Neuromorphic Data Classification Tasks
 
-This guide provides an overview of the neuromorphic event-driven vision experiments conducted with **spikeDE**. These experiments demonstrate the superiority of our fractional-order Spiking Neural Networks (f-SNNs) over traditional integer-order SNNs in processing spatiotemporal correlations inherent in neuromorphic data.
+This guide provides an overview of the neuromorphic event-driven vision experiments conducted with **spikeDE**. These experiments demonstrate the superiority of our fractional-order Spiking Neural Networks (*f*-SNNs) over traditional integer-order SNNs in processing spatiotemporal correlations inherent in neuromorphic data.
 
-All source code for these experiments is open-source and reproducible. You can access the specific implementation scripts and configurations in our :material-github: [GitHub repository](#).
+All source code for these experiments is open-source and reproducible. You can access the specific implementation scripts and configurations in our :material-github: [GitHub repository](https://github.com/PhysAGI/spikeDE/tree/main/examples/ICLR_Release/Neuromorphic).
 
 ## Overview
 
 Neuromorphic data, captured by Dynamic Vision Sensors (DVS), consists of asynchronous event streams with microsecond-level temporal resolution. Traditional SNNs often struggle to capture long-range temporal dependencies due to their Markovian nature (memoryless). 
 
-Our **f-SNN** framework replaces standard integer-order neuron dynamics with **fractional-order differential equations (f-ODEs)**. This introduces a power-law memory kernel, allowing the network to retain information from distant past events, resulting in:
+Our ***f*-SNN** framework replaces standard integer-order neuron dynamics with **fractional-order differential equations (*f*-ODEs)**. This introduces a power-law memory kernel, allowing the network to retain information from distant past events, resulting in:
 
 - **Higher Classification Accuracy**: Consistently outperforming LIF-based baselines (SpikingJelly, snnTorch).
 - **Enhanced Robustness**: Superior stability against noise, occlusion, and temporal jitter.
@@ -34,7 +34,7 @@ We implemented two backbone architectures to ensure fair comparison:
 1.  **CNN-based**: Following the `DVSNet` architecture.
 2.  **Transformer-based**: Using the `Spikformer` backbone.
 
-**Baselines:** We compared our `f-LIF` neurons against standard `LIF` neurons implemented in popular frameworks including [SpikingJelly](https://github.com/fangwei123456/spikingjelly) and [snnTorch](https://github.com/jeshraghian/snntorch).
+**Baselines:** We compared our *f*-LIF neurons against standard LIF neurons implemented in popular frameworks including [SpikingJelly](https://github.com/fangwei123456/spikingjelly) and [snnTorch](https://github.com/jeshraghian/snntorch).
 
 ### Key Hyperparameters
 
@@ -47,9 +47,9 @@ We implemented two backbone architectures to ensure fair comparison:
 
 ## Key Results
 
-Our f-SNN models achieved state-of-the-art or superior results across all datasets. For instance, on the **DVS128 Gesture** dataset using a Transformer backbone, f-SNN achieved **95.83%** accuracy, significantly outperforming the SpikingJelly baseline (93.40%).
+Our *f*-SNN models achieved state-of-the-art or superior results across all datasets. For instance, on the **DVS128 Gesture** dataset using a Transformer backbone, *f*-SNN achieved **95.83%** accuracy, significantly outperforming the SpikingJelly baseline (93.40%).
 
-| Dataset | Architecture | LIF (SpikingJelly) | LIF (snnTorch) | **f-LIF (spikeDE)** |
+| Dataset | Architecture | LIF (SpikingJelly) | LIF (snnTorch) | ***f*-LIF (spikeDE)** |
 | :--- | :--- | :--- | :--- | :--- |
 | **N-MNIST** | CNN | 99.27% | 99.08% | **99.48%** |
 | **DVS128 Gesture** | Transformer | 93.40% | 88.99% | **95.83%** |
@@ -57,7 +57,7 @@ Our f-SNN models achieved state-of-the-art or superior results across all datase
 | **HarDVS** | CNN | 46.10% | 46.26% | **47.66%** |
 
 !!! note "Robustness Experiments"
-    The f-SNN framework consistently maintained higher accuracy under high-intensity noise and occlusion compared to integer-order baselines, validating the theoretical stability of fractional-order systems. You can find the detailed experiments in our [ICLR 2026 Paper](https://arxiv.org/abs/2507.16937).
+    The *f*-SNN framework consistently maintained higher accuracy under high-intensity noise and occlusion compared to integer-order baselines, validating the theoretical stability of fractional-order systems. You can find the detailed experiments in our [ICLR 2026 Paper](https://arxiv.org/abs/2507.16937).
 
 ## Reproducing the Results
 

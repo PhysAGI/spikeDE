@@ -2,7 +2,7 @@
 
 Traditional SNNs, governed by integer-order differential equations, often struggle to capture long-range temporal dependencies without resorting to deep, computationally expensive architectures. Our team recognized that biological neurons operate with complex, non-Markovian dynamics—properties naturally described by **fractional calculus**.
 
-The goal of **spikeDE** is to bridge the gap between advanced mathematical theory and practical deep learning applications. By providing a robust, :simple-pytorch: PyTorch-native implementation of Fractional-Order SNNs (f-SNNs), we aim to empower researchers and engineers to build more expressive, robust, and biologically plausible neural models with minimal effort.
+The goal of **spikeDE** is to bridge the gap between advanced mathematical theory and practical deep learning applications. By providing a robust, :simple-pytorch: PyTorch-native implementation of Fractional-Order SNNs (*f*-SNNs), we aim to empower researchers and engineers to build more expressive, robust, and biologically plausible neural models with minimal effort.
 
 ## The Research Behind spikeDE
 
@@ -18,7 +18,7 @@ Our work introduces a paradigm shift from Markovian integer-order dynamics to no
 
     ---
 
-    Unlike traditional LIF neurons that rely on exponential decay, our **f-LIF** neurons utilize power-law relaxation via the Mittag-Leffler function. This allows the membrane potential to retain a "heavy-tailed" memory of past inputs, naturally modeling the complex temporal correlations observed in biological neurons.
+    Unlike traditional LIF neurons that rely on exponential decay, our ***f*-LIF** neurons utilize power-law relaxation via the Mittag-Leffler function. This allows the membrane potential to retain a "heavy-tailed" memory of past inputs, naturally modeling the complex temporal correlations observed in biological neurons.
 
 -   :material-shield: **Proven Robustness & Stability**
 
@@ -36,12 +36,12 @@ Our work introduces a paradigm shift from Markovian integer-order dynamics to no
 
     ---
 
-    Despite the added expressivity, our optimized solvers (using short-memory principles and FFT-based convolution) ensure that **f-SNNs** achieve **comparable energy efficiency** to traditional SNNs while delivering state-of-the-art performance on neuromorphic vision and graph learning tasks.
+    Despite the added expressivity, our optimized solvers (using short-memory principles and FFT-based convolution) ensure that ***f*-SNNs** achieve **comparable energy efficiency** to traditional SNNs while delivering state-of-the-art performance on neuromorphic vision and graph learning tasks.
 
 </div>
 
 !!! quote "Key Theoretical Insight"
-    A single fractional-order neuron represents a continuum of timescales that would require infinitely many integer-order units for exact equivalence. This irreducibility grants f-SNNs fundamentally richer expressive power.
+    A single fractional-order neuron represents a continuum of timescales that would require infinitely many integer-order units for exact equivalence. This irreducibility grants *f*-SNNs fundamentally richer expressive power.
 
 ### Citation
 

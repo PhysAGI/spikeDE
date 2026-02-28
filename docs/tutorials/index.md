@@ -75,7 +75,7 @@ Real-world applications and complex task implementations directly adapted from o
     
     ---
 
-    Explore event-driven vision experiments. Learn how f-SNNs outperform traditional models on neuromorphic datasets like DVS128 Gesture and N-Caltech101 by capturing long-range temporal correlations.  
+    Explore event-driven vision experiments. Learn how *f*-SNNs outperform traditional models on neuromorphic datasets like DVS128 Gesture and N-Caltech101 by capturing long-range temporal correlations.  
 
     [:octicons-arrow-right-24: Read Tutorial](./advanced/neuromorphic.md)
 
