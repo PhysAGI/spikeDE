@@ -387,7 +387,7 @@ class SNNLeafTracer(Tracer):
         return super().is_leaf_module(m, module_qualified_name)
 
 
-def symbolic_trace_leaf_neurons(module: nn.module) -> fx.GraphModule:
+def symbolic_trace_leaf_neurons(module: nn.Module) -> fx.GraphModule:
     """
     Symbolically trace a module using the custom `SNNLeafTracer`.
 

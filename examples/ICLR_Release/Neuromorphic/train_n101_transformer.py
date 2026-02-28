@@ -43,7 +43,7 @@ def parse_args():
     parser.add_argument('--dataset', default='DVS128', help='dataset')
     parser.add_argument('--num-classes', type=int, default=101, metavar='N',
                         help='number of label classes (default: 1000)')
-    parser.add_argument('--data-path', default='/data/gcj/data1/DVS128/101', help='dataset')
+    parser.add_argument('--data-path', default='./data/DVS128/101', help='dataset')
 
     parser.add_argument('--device', default='cuda:0', help='device')
     parser.add_argument('-b', '--batch-size', default=32, type=int)

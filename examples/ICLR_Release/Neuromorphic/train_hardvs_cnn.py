@@ -176,7 +176,7 @@ def main():
                         help='number of total epochs to run')
     parser.add_argument('-j', default=4, type=int, metavar='N',
                         help='number of data loading workers (default: 4)')
-    parser.add_argument('-data-dir', default='/data/gcj/data1/DVS128/hardvs', type=str, help='root dir of hardvs dataset')
+    parser.add_argument('-data-dir', default='./data/DVS128/hardvs', type=str, help='root dir of hardvs dataset')
     parser.add_argument('-out-dir', type=str, default='./logs', help='root dir for saving logs and checkpoint')
     parser.add_argument('-resume', type=str, help='resume from the checkpoint path')
     parser.add_argument('-amp', action='store_true', help='automatic mixed precision training')

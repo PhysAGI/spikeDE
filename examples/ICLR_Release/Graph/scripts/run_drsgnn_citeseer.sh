@@ -7,7 +7,8 @@ ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$ROOT_DIR"
 python run.py --backbone DRSGNN \
     --dataset Citeseer \
+    --integrator fdeint \
     --tau 2.0 \
     --alpha 0.3 \
     --method pred \
-    --taulearnable
+    --tau_learnable
